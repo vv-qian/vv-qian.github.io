@@ -1,0 +1,75 @@
+path {
+  opacity: 0.85;
+  stroke: #000;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+g.chart-body {
+  opacity: 0.3;
+}
+
+#container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: block;
+}
+#map {
+  margin: 0 auto;
+  right:220px;
+}
+.button {
+  display: block;
+  position: absolute;
+  width: 100px;
+  left: 40%;
+}
+#mhi {
+  top: 600px;
+  height: 15px;
+  width: 15px;
+  background: green;
+}
+#mgr {
+  top: 580px;
+  height: 15px;
+  width: 15px;
+  background: purple;
+}
+#year_2010 {
+  top: 550px;
+  height: 15px;
+  width: 15px;
+  background: blue;
+}
+#year_2011 {
+  top: 530px;
+  height: 15px;
+  width: 15px;
+  background:blue;
+}
+#year_2012 {
+  top: 510px;
+  height: 15px;
+  width: 15px;
+  background:blue;
+}
+#year_2013 {
+  top: 480px;
+  height: 15px;
+  width: 15px;
+  background:blue;
+}
+#year_2014 {
+  top: 460px;
+  height: 15px;
+  width: 15px;
+  background:blue;
+}
+#label {
+  position: relative;
+  left: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+}

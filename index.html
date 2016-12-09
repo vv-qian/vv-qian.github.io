@@ -23,8 +23,17 @@
   }
   #timeline {
     position: relative;
-    left: 870px;
+    left: 800px;
     bottom: 600px;
+  }
+  #biz_timeline {
+    position: relative;
+    left: 0px;
+    bottom: 300px;
+  }
+  #biz2_timeline {
+    position:relative;
+    bottom: 300px;
   }
   #map svg {
     transform: translateX(-150px);
@@ -98,8 +107,9 @@
     <div id="map">
       <h3 id="yolo">Median Gross Rent 2014</h3>
     </div>
-    <div id="timeline">
-    </div>
+    <div id="timeline"></div>
+    <div id="biz_timeline"> </div>
+    <div id="biz2_timeline"></div>
     <div id="legend">
       <button id="mhi" type="button" class="button">Mean Household Income</button>
       <button id="mgr" type="button" class="button">Median Gross Rent</button>
@@ -125,6 +135,8 @@
 
     var map = dc.geoChoroplethChart(svg); //focus chart
     var timeline = dc.seriesChart("#timeline"); // range chart (year)
+    var biz_timeline = dc.seriesChart("#biz_timeline");
+    var biz2_timeline = dc.seriesChart("#biz2_timeline");
 
     var colors = {"mhi": "green", "mgr": "purple", "poverty": "blue"};
     var full_title = {"mhi": "Mean Household Income", "mgr": "Median Gross Rent", "poverty": "blue"};
@@ -162,6 +174,8 @@
     var ndx, yearDim, mhiDim, mgrDim, tractDim;
     var filterYear, filterMetric, sf_topojson;
     var parsed_data = [];
+    var parsed_biz = [];
+    var parsed_biz_tract = [];
 
     var divlegend = document.getElementById("legend");
     var maptitle = document.getElementById("yolo");
@@ -207,6 +221,7 @@
       if (yearChange) {
         var new_year_group = metricYearChange_map();
         map.group(new_year_group);
+        plot_biz(yearChange);
       }
 
       var new_metric_group = metricChange_timeline();
@@ -224,16 +239,16 @@
 
     queue()
       .defer(d3.json, "data/sf_tracts.json")
-      .defer(d3.csv, "data/year_ordered_acs_pov_inc_rent_adj.csv")
+      .defer(d3.csv, "data/year_ordered_acs_inc_rent_biz.csv")
+      .defer(d3.csv, "data/groc_liq.csv")
       .await(ready);
 
     var data_real;
 
-    function ready(error, tracts, data) {
+    function ready(error, tracts, data, biz) {
       if (error)
         throw error;
       sf_topojson = topojson.feature(tracts, tracts.objects.sf).features;
-
 
       filterMetric = "mgr";
       filterYear = 2014;
@@ -247,7 +262,16 @@
         d.year = dateFormat.parse(d.year);
         d.mhi = +d.mhi;
         d.mgr = +d.mgr;
-        parsed_data.push({"id": d.id, "year": d.year, "mhi": d.mhi, "mgr": d.mgr});
+        parsed_data.push({"id": d.id, "year": d.year, "mhi": d.mhi, "mgr": d.mgr, "liq": +d.liq, "high_end_groc": +d.high_end_groc, "low_end_groc": +d.low_end_groc, "groc": +d.groc});
+      });
+
+      biz.forEach(function(d) {
+        d.end_date = dateFormat.parse(d.end_date);
+        d.start_date = dateFormat.parse(d.start_date);
+        d.storetype = d.storetype;
+        d.lat = +d.lat;
+        d.lon = +d.lon;
+        parsed_biz.push({"end_date": d.end_date, "storetype": d.storetype, "lat": d.lat, "lon": d.lon, "start_date": d.start_date});
       });
 
 
@@ -260,6 +284,7 @@
         .call(renderTiles);
       d3.select(".loading").remove();
       render(filterYear, filterMetric);
+      plot_biz(false);
 
     }
 
@@ -286,11 +311,25 @@
 
       var year_grouped = metricChange_timeline();
 
+      var hg_grouped = yearDim.group(function(d) { return d;}).reduceSum(
+        function(d) {
+          return d.high_end_groc;
+        });
+
+      var lg_grouped = yearDim.group(function(d) { return d;}).reduceSum(
+        function(d) {
+          return d.low_end_groc;
+        });
+
+      console.log(hg_grouped.all());
+      console.log(lg_grouped.all());
+
       var order = parsed_data.map(function(values) {
         return [values.id, +values.year.getFullYear()];
       });
 
-      var sorted_group = sort_group(year_grouped, order);
+      // var hg_grouped = sort_group(hg_grouped, order);
+      // var lg_grouped = sort_group(lg_grouped, order)
 
       var specColors = color(filterMetric);
       var specDomains = domains[filterMetric];
@@ -340,7 +379,46 @@
           .clipPadding(10)
           .elasticY(true)
           .brushOn(false)
-          .xAxis().ticks(6).tickFormat(d3.format("d"));
+          .xAxis().ticks(8).tickFormat(d3.format("d"));
+
+    biz_timeline.width(470)
+        .height(300)
+        .margins({top: 10, right: 50, bottom: 30, left: 30})
+        .dimension(yearDim)
+        .group(hg_grouped)
+        .keyAccessor(function(d) { return +d.key[1]; })
+        .valueAccessor(function(d) {
+          return +d.value;
+        })
+        .seriesAccessor(function(d) { return d.key[0]; })
+        .x(d3.scale.linear().domain([2000, 2014]))
+        .renderHorizontalGridLines(true)
+        .xAxisLabel("Year")
+        .yAxisLabel("Number of '$$'+ Grocery Stores")
+        .clipPadding(10)
+        .elasticY(true)
+        .brushOn(false)
+        .xAxis().ticks(8).tickFormat(d3.format("d"));
+
+    biz2_timeline.width(470)
+        .height(300)
+        .margins({top: 10, right: 50, bottom: 30, left: 30})
+        .dimension(yearDim)
+        .group(lg_grouped)
+        .keyAccessor(function(d) { return +d.key[1]; })
+        .valueAccessor(function(d) {
+          return +d.value;
+        })
+        .seriesAccessor(function(d) { return d.key[0]; })
+        .x(d3.scale.linear().domain([2000, 2014]))
+        .renderHorizontalGridLines(true)
+        .xAxisLabel("Year")
+        .yAxisLabel("Number of '$' Grocery Stores")
+        .clipPadding(10)
+        .elasticY(true)
+        .brushOn(false)
+        .xAxis().ticks(8).tickFormat(d3.format("d"));
+
 
       dc.renderAll();
     }
@@ -405,6 +483,48 @@
         }
       );
       return metric_grouped;
+    }
+
+
+    function plot_biz(yearChange) {
+      var select_year_biz_data = [];
+
+      parsed_biz.forEach(function(d) {
+        console.log(filterYear)
+        if (d.end_date.getFullYear() >= filterYear && d.start_date.getFullYear() <= filterYear) {
+          select_year_biz_data.push({"end_date": d.end_date, "storetype": d.storetype, "lat": d.lat, "lon": d.lon});
+        }
+      });
+      console.log(projection([-122.406531, 37.795406]))
+      console.log(projection([-122.412481, 37.80005]))
+
+
+      if (yearChange) {
+        console.log("year change")
+        svg.selectAll("circle.biz_circles").remove();
+      }
+
+
+      svg.selectAll(".circle")
+        .data(select_year_biz_data).enter()
+        .append("circle", ".circle")
+        .attr("class", "biz_circles")
+        .attr("r", "5px") // TODO: change to be 1 mile
+        .attr("fill", function(d) { // yellow are liquor stores, orange are grocery
+          if (d.storetype == "low_end_groc") {
+              return "red"
+          } else if (d.storetype === "high_end_groc") {
+              return "#FF8000"
+          } else if (d.storetype === "liq") {
+              return "#FFFF00"
+          } else if (d.storetype === "groc") {
+              return "#636363"
+          }
+        })
+        .attr("fill-opacity", 0.5)
+        .attr("transform", function(d) {
+          return "translate(" + projection([d.lon, d.lat]) + ")";
+        });
     }
   </script>
 </body>

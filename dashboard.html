@@ -33,8 +33,7 @@
   }
   #biz2_timeline {
     position:relative;
-    bottom: 600px;
-    left: 1100px;
+    bottom: 300px;
   }
   #map svg {
     transform: translateX(-150px);
@@ -486,23 +485,6 @@
       return metric_grouped;
     }
 
-    function toRad(Value) {
-    /** Converts numeric degrees to radians */
-      return Value * Math.PI / 180;
-    }
-    function calcDist(lat1, lat2, lon1, lon2) {
-      var r = 6371e3;
-      var l1 = toRad(lat1);
-      var l2 = toRad(lat2);
-      var change_lat = toRad(lat2 - lat1);
-      var change_lon = toRad(lon2 - lon1);
-
-      var a = Math.sin(change_lat / 2) * Math.sin(change_lat / 2) + Math.cos(l1) * Math.cos(l2) * Math.sin(change_lon / 2) * Math.sin(change_lon / 2);
-      var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a))
-      var d = r * c;
-      return Math.round(d * 0.621371);
-
-    }
 
     function plot_biz(yearChange) {
       var select_year_biz_data = [];

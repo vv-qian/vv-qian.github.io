@@ -21,7 +21,7 @@ a:hover {
   color: #18BC9C;
   outline: none; }
 
-h1,
+
 h2,
 h3,
 h4,
@@ -30,6 +30,12 @@ h6 {
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 700;
   text-transform: uppercase; }
+
+h1 {
+  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  font-size: 20px;
+}
 
 hr.star-light,
 hr.star-primary {
@@ -100,64 +106,6 @@ section.success {
     .scroll-top .btn:focus {
       outline: none; }
 
-#mainNav {
-  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 700;
-  text-transform: uppercase;
-  border: none;
-  background: #2C3E50; }
-  #mainNav a:focus {
-    outline: none; }
-  #mainNav .navbar-brand {
-    font-size: 1.1rem;
-    color: white; }
-    #mainNav .navbar-brand.active, #mainNav .navbar-brand:active, #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
-      color: white; }
-  #mainNav .navbar-nav {
-    letter-spacing: 1px; }
-    #mainNav .navbar-nav li.nav-item a.nav-link {
-      color: white; }
-      #mainNav .navbar-nav li.nav-item a.nav-link:hover {
-        color: #18BC9C;
-        outline: none; }
-      #mainNav .navbar-nav li.nav-item a.nav-link:active, #mainNav .navbar-nav li.nav-item a.nav-link:focus {
-        color: white; }
-  #mainNav .navbar-toggler {
-    font-size: 14px;
-    padding: 11px;
-    text-transform: uppercase;
-    color: white;
-    border-color: white; }
-    #mainNav .navbar-toggler:focus, #mainNav .navbar-toggler:hover {
-      color: white;
-      border-color: #18BC9C;
-      background-color: #18BC9C; }
-
-@media (min-width: 992px) {
-  #mainNav {
-    padding-top: 25px;
-    padding-bottom: 25px;
-    -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
-    -moz-transition: padding-top 0.3s, padding-bottom 0.3s;
-    transition: padding-top 0.3s, padding-bottom 0.3s; }
-    #mainNav .navbar-brand {
-      font-size: 2em;
-      -webkit-transition: all 0.3s;
-      -moz-transition: all 0.3s;
-      transition: all 0.3s; }
-    #mainNav .navbar-nav > li.nav-item > a.nav-link.active {
-      color: white;
-      border-radius: 3px;
-      background: #18BC9C; }
-      #mainNav .navbar-nav > li.nav-item > a.nav-link.active:active, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:focus, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:hover {
-        color: white;
-        background: #18BC9C; }
-  #mainNav.navbar-shrink {
-    padding-top: 10px;
-    padding-bottom: 10px; }
-    #mainNav.navbar-shrink .navbar-brand {
-      font-size: 1.5em; } }
-
 header.masthead {
   padding-top: 60px;
   padding-bottom: 50px;
@@ -192,17 +140,31 @@ header.masthead {
 
 #portfolio .portfolio-item {
   right: 0;
-  margin: 0 0 15px;
-  padding: 30px;}
+  /*margin: 0 0 15px;*/
+  padding: 30px;
+  width: 600px;
+  min-width: 550px;
+  /*height:400px;*/
+}
   #portfolio .row {
-    padding-top: 60px;
+    padding-top: 10px;
+    text-align: center;
   }
+  #portfolio .row .portfolio-body {
+    max-width: 580px;
+    max-height: 300px;
+    position: relative;
+    top: 130px;
+  }
+
   #portfolio .portfolio-item .portfolio-link {
     position: relative;
     display: block;
-    max-width: 400px;
+    max-width: 600px;
     margin: 0 auto;
-    cursor: pointer; }
+    cursor: pointer;
+
+  }
     #portfolio .portfolio-item .portfolio-link .caption {
       position: absolute;
       width: 100%;
@@ -234,7 +196,18 @@ header.masthead {
 
 @media (min-width: 767px) {
   #portfolio .portfolio-item {
-    margin: 0 0 30px; } }
+    margin: 0 0 30px; }
+  }
+@media (max-width: 1000px) {
+  #portfolio .row .portfolio-body {
+    top: 0px;
+  }
+}
+@media (min-width:1000px) and (max-width: 1200px) {
+  #portfolio .row .portfolio-body {
+    max-width: 300px;
+  }
+}
 
 .portfolio-modal .modal-dialog {
   max-width: 100%;

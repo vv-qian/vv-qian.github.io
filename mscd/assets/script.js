@@ -1,4 +1,3 @@
-
 var width = 818,
   height = 800;
 var svg = d3.select("#map")

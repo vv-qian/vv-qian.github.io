@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+  <script src="d3.geo.tile.min.js"></script>
+  <script type="text/javascript" src="crossfilter.min.js"></script>
+  <script type="text/javascript" src="https://dc-js.github.io/dc.js/js/dc.min.js"></script>
+  <script type="text/javascript" src="colorbrewer.min.js"></script>
+  <script src="https://d3js.org/topojson.v1.min.js"></script>
+  <script src="https://d3js.org/queue.v1.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="dc.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/style.css">
+</head>
+<body>
+  <div id="container">
+    <div id="map">
+      <h3 id="yolo">Median Gross Rent 2014</h3>
+    </div>
+    <!-- <div id="timeline"></div>
+    <div id="biz_timeline"> </div>
+    <div id="biz2_timeline"></div> -->
+    <div id="legend">
+      <button id="mhi" type="button" class="button-rect">Mean Household Income</button>
+      <button id="mgr" type="button" class="button-rect">Median Gross Rent</button>
+      <button id="year_2000" type="button" class="button">2000</button>
+      <button id="year_2010" type="button" class="button">2010</button>
+      <button id="year_2011" type="button" class="button">2011</button>
+      <button id="year_2012" type="button" class="button">2012</button>
+      <button id="year_2013" type="button" class="button">2013</button>
+      <button id="year_2014" type="button" class="button">2014</button>
+    </div>
+
+    <!-- Blurb -->
+    <div id="blurb">
+      <h2>A Note</h2>
+      <p>The fire-colored circles represent grocery and liquor stores. Low-end grocery stores ($) are red, higher-end grocery stores ($$) are orange and
+        liquor/corner stores are yellow. Gray circles represent grocery stores with an undetermined price range. 
+      </p>
+      <p>This project is meant to be an exploratory dashboard with much possibilities for future work.
+      A couple of areas for further work: one, include amenities on the map such as museums, parks, cafes and the like and
+      two, rank grocery stores according to customer satisfaction in addition to price range.
+      </p>
+    </div>
+  </div>
+  <script type="text/javascript" src="assets/script.js"></script>
+</body>
+</html>

@@ -117,9 +117,9 @@ function metricChange(yearChange) {
 }
 
 queue()
-  .defer(d3.json, "/data/sf_tracts.json")
-  .defer(d3.csv, "/data/year_ordered_acs_inc_rent_biz.csv")
-  .defer(d3.csv, "/data/groc_liq.csv")
+  .defer(d3.json, "/mscd//data/sf_tracts.json")
+  .defer(d3.csv, "/mscd/data/year_ordered_acs_inc_rent_biz.csv")
+  .defer(d3.csv, "/mscd/data/groc_liq.csv")
   .await(ready);
 
 var data_real;

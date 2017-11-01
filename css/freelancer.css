@@ -206,7 +206,12 @@ header.masthead {
     width: 700px;
     min-width: 300px;
   }
-
+  #portfolio .row .portfolio-body span {
+    font-size: 0.80rem;
+  }
+  #portfolio .row .portfolio-body h1 {
+    font-size: 15px;
+  }
 }
 @media (min-width:1000px) and (max-width: 1200px) {
   #portfolio .row .portfolio-body {

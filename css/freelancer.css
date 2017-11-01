@@ -202,6 +202,11 @@ header.masthead {
   #portfolio .row .portfolio-body {
     top: 0px;
   }
+  #portfolio .portfolio-item {
+    width: 700px;
+    min-width: 300px;
+  }
+
 }
 @media (min-width:1000px) and (max-width: 1200px) {
   #portfolio .row .portfolio-body {

@@ -67,9 +67,19 @@ body, html {
   display: none;
 }
 
+.short-blurb {
+  text-align: center;
+  color: #cc5500;
+  font-size: 30px;
+  position: relative;
+  top: 42%;
+  font-family: 'Seaweed Script', cursive;
+  display: none;
+}
+
 .arrow-container1, .arrow-container2 {
   position: absolute;
-  margin-top: 14px;
+  /*margin-top: %;*/
   margin-left: 48.5%;
 }
 

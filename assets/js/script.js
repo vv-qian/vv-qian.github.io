@@ -1,15 +1,15 @@
 $(document).ready(function() {
 
-  $(".about-container").one("mouseover", function() {
-    // how to track whether or not user is scrolling up or down?
-    $(".description").prepend("data, ");
-    setTimeout(function() {
-      $(".description").append(", cs");
-    }, 700);
-    setTimeout(function() {
-      $(".description").append(", design");
-    }, 1400);
-  });
+  // $(".about-container").one("mouseover", function() {
+  //   // how to track whether or not user is scrolling up or down?
+  //   $(".description").prepend("data, ");
+  //   setTimeout(function() {
+  //     $(".description").append(", cs");
+  //   }, 700);
+  //   setTimeout(function() {
+  //     $(".description").append(", design");
+  //   }, 1400);
+  // });
 
   $(window).load(function() {
     var counter = 0;
@@ -30,6 +30,11 @@ $(document).ready(function() {
     setTimeout(function() {
       $(".img").fadeIn(600);
     }, 3000);
+
+    $(function() {
+      $(".short-blurb").delay(3000).fadeIn();
+    });
+
   });
 
   $(window).scroll(function(event) {

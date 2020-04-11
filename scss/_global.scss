@@ -112,3 +112,20 @@ section.success {
   }
 }
 
+/* Custom styles start here */
+
+.portfolio-body {
+    padding: 0 15px;
+}
+
+.img-fluid {
+    max-width: 300px;
+    max-height: 300px;
+    transition: all 0.3s;
+}
+
+.img-fluid:hover {
+    box-shadow: 10px 10px #556d7c;
+    transform: translate(-10px, -10px);
+}
+

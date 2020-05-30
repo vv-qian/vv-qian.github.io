@@ -452,13 +452,15 @@ footer {
 }
 
 .img-fluid {
-    max-width: 300px;
-    max-height: 300px;
-    transition: all 0.3s;
+  max-width: 300px;
+  max-height: 300px;
+  transition: all 0.3s ease-in;
 }
 
 .img-fluid:hover {
-    box-shadow: 10px 10px #556d7c;
-    transform: translate(-10px, -10px);
+  box-shadow: 10px 10px #556d7c;
+  -moz-box-shadow: 10px 10px #556d7c;
+  -webkit-box-shadow: 10px 10px #556d7c;
+  transform: translate(-10px, -10px);
 }
 

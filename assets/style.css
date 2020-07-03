@@ -1,0 +1,120 @@
+:root {
+  --font-family: "PT Sans", sans-serif;
+}
+
+body {
+  padding: 5% 10%;
+}
+
+span,
+p,
+h2,
+h3 {
+  font-family: var(--font-family);
+}
+
+h2 {
+  margin-top: 7%;
+}
+
+h3 {
+  font-weight: 100;
+  font-style: italic;
+  display: inline;
+}
+
+h5 {
+  font-weight: 100;
+  font-size: 1.03em;
+  display: inline;
+  color: #777;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: #59a3c8;
+}
+
+/* Header */
+header.masthead {
+  margin-bottom: 10%;
+}
+
+.profile {
+  width: 200px;
+  border-radius: 200px;
+  float: left;
+  margin-right: 5%;
+}
+
+.intro-text p {
+  font-size: 18px;
+  font-weight: 100;
+}
+
+hr {
+  color: #333b3e;
+}
+
+.clear {
+  clear: both;
+}
+
+/* Project container */
+.project-container {
+  padding: 10px;
+  margin-bottom: 8px;
+  border: 1px solid #777;
+  transition: all 0.35s;
+  cursor: pointer;
+}
+
+.hover {
+  box-shadow: 4px 3px 1px 0px rgba(204, 204, 204, 1);
+}
+
+.details {
+  margin: 20px 0 10px;
+  text-align: left;
+}
+.details img {
+  max-width: 50%;
+  margin: 5px 15px 20px 0;
+  float: left;
+}
+.details p {
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+  padding-right: 10px;
+}
+.details.hidden {
+  display: none;
+}
+
+.details .capWidth {
+  max-width: 300px;
+}
+
+/* For listed projects */
+.project-container.list .details img {
+  float: none;
+  /* display: block; */
+  margin: auto;
+  padding: 10px;
+  vertical-align: top;
+}
+
+/* MOBILE */
+@media screen and (max-width: 450px) {
+  .details img,
+  .profile {
+    float: none;
+    text-align: center;
+  }
+
+  .details img,
+  .details .capWidth {
+    max-width: 100%;
+    padding: 10px 0 !important;
+  }
+}

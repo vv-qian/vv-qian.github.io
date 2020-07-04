@@ -4,14 +4,13 @@ $(".project-container").each(function () {
 });
 
 projectContainerIDs.map((id) => {
+  // On click
   $(`#${id}`).click(() => {
-    $(`#${id} .details`).toggleClass("hidden");
-    document.getElementById(`${id}`).scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-      inline: "nearest",
-    });
+    history.replaceState(null, null, `${document.location.pathname}#${id}`);
+    toggleDetails();
   });
+
+  // On hover
   $(`#${id}`).hover(
     function () {
       if (
@@ -25,4 +24,24 @@ projectContainerIDs.map((id) => {
       $(this).removeClass("hover");
     }
   );
+});
+
+function toggleDetails() {
+  if (location.hash) {
+    $(`${location.hash} .details`).toggleClass("hidden");
+    document
+      .getElementById(`${location.hash.replace("#", "")}`)
+      .scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+        inline: "nearest",
+      });
+  }
+}
+
+window.addEventListener("hashchange", toggleDetails, false);
+
+// On load
+$(document).ready(function () {
+  toggleDetails();
 });

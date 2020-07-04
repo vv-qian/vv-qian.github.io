@@ -117,14 +117,16 @@
           The idea of gamifying the project came up early in the discussion as
           an effective and engaging way for readers to gauge their credit-score
           knowledge and to demystify the "whys" behind credit-score dips and
-          rises. We needed to cater to as broad of a population, while
-          preserving profile specificity to be able to offer helpful
-          information. In the end, we offered five profiles with scores across
-          the spectrum and five unique sets of questions and responses.
+          rises. We needed to cater to as broad of a reader population as
+          possible, while preserving enough profile specificity to be able to
+          offer helpful information. In the end, we offered five profiles with
+          scores across the spectrum and a unique set of questions and responses
+          for each.
         </p>
         <p>
           To provide summarized insights for the reader, the game's backend —
-          built using Vuex — kept track of guesses and their accuracy.
+          built using Vuex — kept track of guesses and whether the reader
+          consistently overestimated or underestimated score changes.
         </p>
         <div class="clear"></div>
       </div>
@@ -145,13 +147,14 @@
           ><img src="assets/portfolio/walkthrough/TWENTYTENS.gif" alt=""
         /></a>
         <p>
-          The results of a WSJ analysis of articles published in the 2010s were
-          the stars of the project. The user's scrolling drove when phrases were
-          highlighted and context was provided. The simple column animation
-          provides a sense of the narratives unfolding as the years progress. I
-          developed this in Vue.js — after using the framework for the first
-          time in "The Credit-Score Game," I found every chance to leverage its
-          responsiveness.
+          The result of a WSJ analysis of articles published in the 2010s was
+          the star of the project. To highlight and augment the narrative arc in
+          each topic analysis, I decided to let the user's scrolling drive when
+          phrases were highlighted and when context was provided. The simple
+          column animation provides a sense of the narratives unfolding as the
+          years progress. I developed this in Vue.js — after using the framework
+          for the first time in "The Credit-Score Game," I found every chance to
+          leverage its responsiveness.
         </p>
         <div class="clear"></div>
       </div>
@@ -182,17 +185,18 @@
             <img src="assets/portfolio/list/IFNOPROFIT.jpg" alt="" /> </picture
         ></a>
         <p>
-          Generously sprinkled with sentences that referenced calculations and
-          derived insights, the initial story draft seemed to have a lot of
-          capacity for graphics that would effectively and clearly convey those
-          insights — particularly to someone, like me, with little knowledge of
-          investing.
+          The initial story draft was replete with sentences that referenced the
+          writer's calculations and derived insights, making the story easily
+          seem dense and inaccessible — particularly to someone with little
+          knowledge of investing. My goal for the visualizations was to simply
+          and clearly convey the story's key points.
         </p>
         <p>
-          So, after identifying the story's key points, I distilled a dataset of
-          the returns of all companies listed on the NYSE and Nasdaq from
-          2015-19 into three visualizations on profitability and returns,
-          volatility and interest-rate risk.
+          So, I distilled a dataset of the returns of all companies listed on
+          the NYSE and Nasdaq from 2015-19 into three visualizations on
+          profitability and returns, volatility and interest-rate risk. These
+          three worked in tandem with the writer's written analysis, more
+          effectively informing and educating the reader.
         </p>
         <div class="clear"></div>
       </div>
@@ -213,13 +217,14 @@
       >
       <div class="details hidden">
         <p>
-          I produced the datasets used in the graphic by using Python and pandas
-          to manipulate results obtained from querying the U.S. Department of
-          Education's College Scorecard Data API. This graphic was initially
+          I produced the datasets visualized in this graphic by using Python and
+          pandas to manipulate results that I queried from the U.S. Department
+          of Education's College Scorecard Data API. This graphic was initially
           prototyped as an interactive tool in which users could compare
           earnings across public, private, selective and nonselective schools,
-          across schools and across majors. We settled on focusing on several
-          key examples that showed program matters more than prestige.
+          across schools and across majors. In the end, we decided to focus on
+          several key examples that showed when it comes to starting pay,
+          program matters more than prestige.
         </p>
         <a
           href="https://www.wsj.com/articles/in-valuing-colleges-tops-in-prestige-doesnt-always-mean-tops-in-starting-salaries-11590532335"
@@ -238,7 +243,8 @@
         <p>
           The visualization's triangular design — coded in d3.js — functions as
           an overview of earnings distribution and rankings and offers a look at
-          how prestige, or selectivity, impacts earnings.
+          how prestige, or selectivity, impacts earnings. It's a multifunctional
+          design that I hope to use again.
         </p>
         <div class="clear"></div>
       </div>

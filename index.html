@@ -14,7 +14,7 @@
     <meta name="author" content="Vanessa Qian" />
     <link rel="stylesheet" href="assets/style.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;500;700&display=swap"
       rel="stylesheet"
     />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -25,11 +25,11 @@
     <header class="masthead">
       <div class="container">
         <div class="intro-text">
-          <img
+          <!-- <img
             class="img profile"
             src="assets/img/profile.jpg"
             alt="Vanessa Qian"
-          />
+          /> -->
           <p>
             Hi, I'm Vanessa Qian. Right now, I'm working at the Wall Street
             Journal as a graphics reporter. I distill data and information into
@@ -50,22 +50,49 @@
         </div>
       </div>
     </header>
-    <hr />
     <!-- PROJECTS -->
-    <!-- walkthroughs -->
-    <h2>Brief walkthroughs of select published projects</h2>
-
-    <!-- MARCH -->
-    <div class="project-container walkthrough" id="coronavirus-business">
-      <span
-        ><a
-          href="https://www.wsj.com/graphics/march-changed-everything/"
+    <div class="content-container content-container__walkthrough">
+      <!-- walkthroughs -->
+      <!-- COVID STORM -->
+      <div class="project-container walkthrough" id="covid-storm">
+        <a
+          href="https://www.wsj.com/graphics/covid-storm-cases-deaths-testing-coronavirus-trump/"
           target="_blank"
-          ><h3>The Month Coronavirus Felled American Business</h3></a
-        >
-        <h5>&nbsp;|&nbsp;April 2020</h5></span
-      >
-      <div class="details hidden">
+          ><img src="assets/portfolio/walkthrough/COVIDSTORM.gif" alt=""
+        /></a>
+        <div class="details">
+          <div class="meta">
+            <a
+              href="https://www.wsj.com/graphics/covid-storm-cases-deaths-testing-coronavirus-trump/"
+              target="_blank"
+              ><h3 data-title="The Covid Storm">The Covid Storm</h3></a
+            >
+            <!-- <h5>August 2020</h5> -->
+          </div>
+          <div class="description">
+            <p>
+              To achieve a "floating field of objects" effect, I used CSS's
+              z-axis — a first for me! I tinkered around with Javascript
+              libraries such as
+              <a href="https://dixonandmoe.com/rellax/">Rellax</a> and, after
+              coming across
+              <a
+                href="https://developers.google.com/web/updates/2016/12/performant-parallaxing"
+                >this post on performant parallaxing</a
+              >, a purely CSS parallax approach. The CSS-only approach leverages
+              how objects placed at different points on the z-axis appear when
+              scrolling. In the end, I opted for the CSS approach because I
+              liked its simplicity and novelty. Although I experienced a steep
+              learning curve understanding how perspective and translateZ work
+              together, this project was full of fun experimentation.
+            </p>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+
+      <!-- MARCH -->
+      <div class="project-container walkthrough" id="coronavirus-business">
         <a
           href="https://www.wsj.com/graphics/march-changed-everything/"
           target="_blank"
@@ -73,164 +100,113 @@
             src="assets/portfolio/walkthrough/MARCHCHANGEDEVERYTHING-bigtop.gif"
             alt=""
         /></a>
-        <a
-          href="https://www.wsj.com/graphics/march-changed-everything/"
-          target="_blank"
-          ><img
-            class="capWidth"
-            src="assets/portfolio/walkthrough/MARCHCHANGEDEVERYTHING-subhed2.png"
-            alt="March 31: 'It's Just Not Possible To Predict'"
-        /></a>
-        <p>
-          To immediately convey the sudden rise of coronavirus cases in the U.S.
-          and the rapidity with which the American business landscape was forced
-          to deal with the pandemic, we used a full-screen, scroll-driven bar
-          chart representing the number of confirmed cases as an impactful
-          introduction to the story.
-        </p>
-        <p>
-          Dotting the story were calendrical subheads, or guide posts, to help
-          the reader keep track of key economic and virus metrics as the story
-          progressed chronologically.
-        </p>
-        <div class="clear"></div>
+        <!-- <h5>April 2020</h5> -->
+        <div class="details">
+          <div class="meta">
+            <a
+              href="https://www.wsj.com/graphics/march-changed-everything/"
+              target="_blank"
+              ><h3 data-title="The Month Coronavirus Felled American Business">
+                The Month Coronavirus Felled American Business
+              </h3></a
+            >
+          </div>
+          <div class="description">
+            <p>
+              To immediately convey the sudden rise of coronavirus cases in the
+              U.S. and the rapidity with which the American business landscape
+              was forced to deal with the pandemic, we used a full-screen,
+              scroll-driven bar chart representing the number of confirmed cases
+              as an impactful introduction to the story.
+            </p>
+            <p>
+              Dotting the story were calendrical subheads, or guide posts, to
+              help the reader keep track of key economic and virus metrics as
+              the story progressed chronologically.
+            </p>
+          </div>
+          <div class="clear"></div>
+        </div>
       </div>
-    </div>
 
-    <!-- CREDIT SCORE -->
-    <div class="project-container walkthrough" id="credit-score-game">
-      <span
-        ><a
-          href="https://www.wsj.com/articles/play-the-credit-score-game-11571832001"
-          target="_blank"
-          ><h3>The Credit Score Game</h3></a
-        >
-        <h5>&nbsp;|&nbsp;October 2019</h5></span
-      >
-      <div class="details hidden">
+      <!-- CREDIT SCORE -->
+      <div class="project-container walkthrough" id="credit-score-game">
         <a
           href="https://www.wsj.com/articles/play-the-credit-score-game-11571832001"
           target="_blank"
           ><img src="assets/portfolio/walkthrough/CREDITSCOREGAME.gif" alt=""
         /></a>
-        <p>
-          The idea of gamifying the project came up early in the discussion as
-          an effective and engaging way for readers to gauge their credit-score
-          knowledge and to demystify the "whys" behind credit-score dips and
-          rises. We needed to cater to as broad of a reader population as
-          possible, while preserving enough profile specificity to be able to
-          offer helpful information. In the end, we offered five profiles with
-          scores across the spectrum and a unique set of questions and responses
-          for each.
-        </p>
-        <p>
-          To provide summarized insights for the reader, the game's backend —
-          built using Vuex — kept track of guesses and whether the reader
-          consistently overestimated or underestimated score changes.
-        </p>
-        <div class="clear"></div>
+        <!-- <h5>October 2019</h5> -->
+        <div class="details">
+          <div class="meta">
+            <a
+              href="https://www.wsj.com/articles/play-the-credit-score-game-11571832001"
+              target="_blank"
+              ><h3 data-title="The Credit Score Game">
+                The Credit Score Game
+              </h3></a
+            >
+          </div>
+          <div class="description">
+            <p>
+              The idea of gamifying the project came up early in the discussion
+              as an effective and engaging way for readers to gauge their
+              credit-score knowledge and to demystify the "whys" behind
+              credit-score dips and rises. We needed to cater to as broad of a
+              reader population as possible, while preserving enough profile
+              specificity to be able to offer helpful information. In the end,
+              we offered five profiles with scores across the spectrum and a
+              unique set of questions and responses for each.
+            </p>
+            <p>
+              This project was several firsts for me — first time using Vue.js,
+              first time in complete control of project design and management
+              and first time collaborating with another newsroom developer.
+            </p>
+          </div>
+          <div class="clear"></div>
+        </div>
       </div>
-    </div>
 
-    <!-- TWENTY TENS -->
-    <div class="project-container walkthrough" id="decade-of-news">
-      <span
-        ><a
-          href="https://www.wsj.com/graphics/a-decade-of-news/"
-          target="_blank"
-          ><h3>A Decade of News: How the Big Stories Evolved</h3></a
-        >
-        <h5>&nbsp;|&nbsp;December 2019</h5></span
-      >
-      <div class="details hidden">
+      <!-- TWENTY TENS -->
+      <div class="project-container walkthrough" id="decade-of-news">
         <a href="https://www.wsj.com/graphics/a-decade-of-news/" target="_blank"
           ><img src="assets/portfolio/walkthrough/TWENTYTENS.gif" alt=""
         /></a>
-        <p>
-          The result of a WSJ analysis of articles published in the 2010s was
-          the star of the project. To highlight and augment the narrative arc in
-          each topic analysis, I decided to let the user's scrolling drive when
-          phrases were highlighted and when context was provided. The simple
-          column animation provides a sense of the narratives unfolding as the
-          years progress. I developed this in Vue.js — after using the framework
-          for the first time in "The Credit-Score Game," I found every chance to
-          leverage its responsiveness.
-        </p>
-        <div class="clear"></div>
+        <!-- <h5>December 2019</h5> -->
+        <div class="details">
+          <div class="meta">
+            <a
+              href="https://www.wsj.com/graphics/a-decade-of-news/"
+              target="_blank"
+              ><h3 data-title="A Decade of News: How the Big Stories Evolved">
+                A Decade of News: How the Big Stories Evolved
+              </h3></a
+            >
+          </div>
+          <div class="description">
+            <p>
+              The result of a WSJ analysis of articles published in the 2010s
+              was the star of the project. To highlight and augment the
+              narrative arc in each topic analysis, I decided to let the user's
+              scrolling drive when phrases were highlighted and when context was
+              provided. The simple column animation provides a sense of the
+              narratives unfolding as the years progress. I developed this in
+              Vue.js — after using the framework for the first time in "The
+              Credit-Score Game," I found every chance to leverage its
+              responsiveness.
+            </p>
+          </div>
+          <div class="clear"></div>
+        </div>
       </div>
-    </div>
 
-    <!-- PROFITABILITY -->
-    <div class="project-container walkthrough" id="profitability">
-      <span
-        ><a
-          href="https://www.wsj.com/articles/the-allure-and-risk-of-unprofitable-companies-11580843071"
-          target="_blank"
-          ><h3>
-            Is it Worth Investing in Unprofitable Companies? We Ran the Numbers
-          </h3></a
-        >
-        <h5>&nbsp;|&nbsp;March 2020</h5></span
-      >
-      <div class="details hidden">
-        <a
-          href="https://www.wsj.com/articles/the-allure-and-risk-of-unprofitable-companies-11580843071"
-          target="_blank"
-        >
-          <picture>
-            <source
-              media="(min-width:450px)"
-              srcset="assets/portfolio/list/IFNOPROFIT-full.jpg"
-            />
-            <img src="assets/portfolio/list/IFNOPROFIT.jpg" alt="" /> </picture
-        ></a>
-        <p>
-          The initial story draft was replete with sentences that referenced the
-          writer's calculations and derived insights, making the story easily
-          seem dense and inaccessible — particularly to someone with little
-          knowledge of investing. My goal for the visualizations was to simply
-          and clearly convey the story's key points.
-        </p>
-        <p>
-          So, I distilled a dataset of the returns of all companies listed on
-          the NYSE and Nasdaq from 2015-19 into three visualizations on
-          profitability and returns, volatility and interest-rate risk. These
-          three worked in tandem with the writer's written analysis, more
-          effectively informing and educating the reader.
-        </p>
-        <div class="clear"></div>
-      </div>
-    </div>
-
-    <!-- GRADPAY -->
-    <div class="project-container walkthrough" id="program-over-prestige">
-      <span
-        ><a
-          href="https://www.wsj.com/articles/in-valuing-colleges-tops-in-prestige-doesnt-always-mean-tops-in-starting-salaries-11590532335"
-          target="_blank"
-          ><h3>
-            In Valuing Colleges, Tops in Prestige Doesn’t Always Mean Tops in
-            Starting Salaries
-          </h3></a
-        >
-        <h5>&nbsp;|&nbsp;May 2020</h5></span
-      >
-      <div class="details hidden">
-        <p>
-          I produced the datasets visualized in this graphic by using Python and
-          pandas to manipulate results that I queried from the U.S. Department
-          of Education's College Scorecard Data API. This graphic was initially
-          prototyped as an interactive tool in which users could compare
-          earnings across public, private, selective and nonselective schools,
-          across schools and across majors. In the end, we decided to focus on
-          several key examples that showed when it comes to starting pay,
-          program matters more than prestige.
-        </p>
+      <!-- GRADPAY -->
+      <div class="project-container walkthrough" id="program-over-prestige">
         <a
           href="https://www.wsj.com/articles/in-valuing-colleges-tops-in-prestige-doesnt-always-mean-tops-in-starting-salaries-11590532335"
           target="_blank"
-        >
-          <picture>
+          ><picture>
             <source
               media="(min-width:450px)"
               srcset="assets/portfolio/walkthrough/WEGRADPAY-full.jpg"
@@ -240,362 +216,343 @@
               alt=""
             /> </picture
         ></a>
-        <p>
-          The visualization's triangular design — coded in d3.js — functions as
-          an overview of earnings distribution and rankings and offers a look at
-          how prestige, or selectivity, impacts earnings. It's a multifunctional
-          design that I hope to use again.
-        </p>
-        <div class="clear"></div>
+        <!-- <h5>May 2020</h5> -->
+        <div class="details">
+          <div class="meta">
+            <a
+              href="https://www.wsj.com/articles/in-valuing-colleges-tops-in-prestige-doesnt-always-mean-tops-in-starting-salaries-11590532335"
+              target="_blank"
+            >
+              <h3
+                data-title="In Valuing Colleges, Tops in Prestige Doesn’t Always Mean Tops in
+        Starting Salaries"
+              >
+                In Valuing Colleges, Tops in Prestige Doesn’t Always Mean Tops
+                in Starting Salaries
+              </h3></a
+            >
+          </div>
+          <div class="description">
+            <p>
+              The visualization's triangular design — coded in d3.js — functions
+              as an overview of earnings distribution and rankings and offers a
+              look at how prestige, or selectivity, impacts earnings. It's a
+              multifunctional design that I hope to use again.
+            </p>
+          </div>
+          <div class="clear"></div>
+        </div>
       </div>
     </div>
-
-    <!-- more in list -->
-    <h2>More projects</h2>
-    <!-- OPIOID -->
-    <div class="project-container list" id="treatment-bottleneck">
-      <span
-        ><a
-          href="https://www.wsj.com/articles/opioid-addiction-treatment-is-limited-by-shortage-of-authorized-doctors-11591538400"
-          target="_blank"
-          ><h3>
-            Opioid-Addiction Treatment Is Limited by Shortage of Authorized
-            Doctors
-          </h3></a
-        >
-        <h5>&nbsp;|&nbsp;June 2020</h5></span
-      >
-      <div class="details hidden">
+    <div class="content-container content-container__list">
+      <!-- more in list -->
+      <!-- virus bump -->
+      <div class="project-container walkthrough" id="coronavirus-hotspots">
         <a
-          href="https://www.wsj.com/articles/opioid-addiction-treatment-is-limited-by-shortage-of-authorized-doctors-11591538400"
+          href="https://www.wsj.com/articles/states-charting-own-paths-in-coronavirus-reclosings-11595928601"
           target="_blank"
         >
-          <picture>
-            <source
-              media="(min-width:450px)"
-              srcset="assets/portfolio/list/HEADDICT-full.jpg"
-            />
-            <img src="assets/portfolio/list/HEADDICT.jpg" alt="" /> </picture
-        ></a>
-        <div class="clear"></div>
-      </div>
-    </div>
-
-    <!-- RETAIL -->
-    <div class="project-container list" id="retail-closures">
-      <span
-        ><a
-          href="https://www.wsj.com/graphics/tracking-americas-biggest-stores-coronavirus/"
-          target="_blank"
-          ><h3>
-            Coronavirus and Store Closures: Tracking America’s Retailers and
-            Restaurants
-          </h3></a
-        >
-        <h5>&nbsp;|&nbsp;March 2020</h5></span
-      >
-      <div class="details hidden">
-        <a
-          href="https://www.wsj.com/graphics/tracking-americas-biggest-stores-coronavirus/"
-          target="_blank"
-        >
-          <picture>
-            <source
-              media="(min-width:450px)"
-              srcset="assets/portfolio/list/RETAILCLOSE-full.jpg"
-            />
-            <img src="assets/portfolio/list/RETAILCLOSE.jpg" alt="" /> </picture
-        ></a>
-        <a
-          href="https://www.wsj.com/graphics/tracking-americas-biggest-stores-coronavirus/"
-          target="_blank"
-          ><img src="assets/portfolio/list/RETAILCLOSEtable.gif" alt=""
+          <img src="assets/portfolio/list/virus-rate-bump.png" alt=""
         /></a>
-        <div class="clear"></div>
+        <div class="details">
+          <a
+            href="https://www.wsj.com/articles/states-charting-own-paths-in-coronavirus-reclosings-11595928601"
+            target="_blank"
+          >
+            <h3
+              data-title="After Reopening, Coronavirus-Hit States Chart Their Own Paths to Close Up Again"
+            >
+              After Reopening, Coronavirus-Hit States Chart Their Own Paths to
+              Close Up Again
+            </h3></a
+          >
+          <div class="clear"></div>
+        </div>
       </div>
-    </div>
 
-    <!-- MM -->
-    <div class="project-container list" id="millennials-and-money">
-      <span
-        ><a
-          href="https://www.wsj.com/graphics/generations-investor-psychology/"
-          target="_blank"
-          ><h3>
-            OK, Millennial (and Gen Xer and Boomer): What Generation Do You
-            Really Think Like? Take Our Quiz.
-          </h3></a
-        >
-        <h5>&nbsp;|&nbsp;March 2020</h5></span
-      >
-      <div class="details hidden">
+      <!-- virus map -->
+      <div class="project-container walkthrough" id="coronavirus-map">
         <a
-          href="https://www.wsj.com/graphics/generations-investor-psychology/"
+          href="https://www.wsj.com/articles/a-guide-to-state-coronavirus-restrictions-11597838401"
           target="_blank"
         >
-          <img src="assets/portfolio/list/MM.gif" alt=""
+          <img src="assets/portfolio/list/virus-hotspot-map.png" alt=""
         /></a>
-        <div class="clear"></div>
+        <div class="details">
+          <a
+            href="https://www.wsj.com/articles/a-guide-to-state-coronavirus-restrictions-11597838401"
+            target="_blank"
+          >
+            <h3 data-title="A Guide to State Coronavirus Restrictions">
+              A Guide to State Coronavirus Restrictions
+            </h3></a
+          >
+          <div class="clear"></div>
+        </div>
       </div>
-    </div>
 
-    <!-- WEYOUNG -->
-    <div class="project-container list" id="egg-freezing">
-      <span
-        ><a
-          href="https://www.wsj.com/articles/the-economics-of-freezing-your-eggs-11581786000"
-          target="_blank"
-          ><h3>
-            The Economics of Freezing Your Eggs
-          </h3></a
-        >
-        <h5>&nbsp;|&nbsp;February 2020</h5></span
-      >
-      <div class="details hidden">
-        <a
-          href="https://www.wsj.com/articles/the-economics-of-freezing-your-eggs-11581786000"
-          target="_blank"
-        >
-          <picture>
-            <source
-              media="(min-width:450px)"
-              srcset="assets/portfolio/list/WEYOUNG-full.jpg"
-            />
-            <img src="assets/portfolio/list/WEYOUNG.jpg" alt="" /> </picture
-        ></a>
-        <div class="clear"></div>
-      </div>
-    </div>
-
-    <!-- 5G -->
-    <div class="project-container list" id="5g-stragglers">
-      <span
-        ><a
-          href="https://www.wsj.com/articles/in-the-race-for-5g-africa-lags-far-behind-11573527600"
-          target="_blank"
-          ><h3>
-            In the Race for 5G, Africa Lags Far Behind
-          </h3></a
-        >
-        <h5>&nbsp;|&nbsp;November 2019</h5></span
-      >
-      <div class="details hidden">
-        <a
-          href="https://www.wsj.com/articles/in-the-race-for-5g-africa-lags-far-behind-11573527600"
-          target="_blank"
-        >
-          <picture>
-            <source
-              media="(min-width:450px)"
-              srcset="assets/portfolio/list/5GSTRAGGLERS-full.jpg"
-            />
-            <img src="assets/portfolio/list/5GSTRAGGLERS.jpg" alt="" />
-          </picture>
-        </a>
-        <div class="clear"></div>
-      </div>
-    </div>
-
-    <!-- FIRE -->
-    <div class="project-container list" id="fire-risk">
-      <span
-        ><a
-          href="https://www.wsj.com/articles/steps-to-reduce-the-risk-of-wildfires-in-california-11574209097"
-          target="_blank"
-          ><h3>
-            Steps to Reduce the Risk of Wildfires in California
-          </h3></a
-        >
-        <h5>&nbsp;|&nbsp;November 2019</h5></span
-      >
-      <div class="details hidden">
-        <a
-          href="https://www.wsj.com/articles/steps-to-reduce-the-risk-of-wildfires-in-california-11574209097"
-          target="_blank"
-        >
-          <picture>
-            <source
-              media="(min-width:450px)"
-              srcset="assets/portfolio/list/BIFIRE-full.jpg"
-            />
-            <img src="assets/portfolio/list/BIFIRE.jpg" alt="" /> </picture
-        ></a>
-        <div class="clear"></div>
-      </div>
-    </div>
-
-    <!-- COFFEE -->
-    <div class="project-container list" id="bean-belt">
-      <span
-        ><a
-          href="https://www.wsj.com/articles/what-rising-temperatures-mean-for-coffee-bean-farmers-11570629999"
-          target="_blank"
-          ><h3>
-            What Rising Temperatures Mean for Coffee-Bean Farmers
-          </h3></a
-        >
-        <h5>&nbsp;|&nbsp;October 2019</h5></span
-      >
-      <div class="details hidden">
+      <!-- COFFEE -->
+      <div class="project-container walkthrough" id="bean-belt">
         <a
           href="https://www.wsj.com/articles/what-rising-temperatures-mean-for-coffee-bean-farmers-11570629999"
           target="_blank"
-        >
-          <picture>
+          ><picture>
             <source
               media="(min-width:450px)"
               srcset="assets/portfolio/list/COFFEE-full.jpg"
             />
             <img src="assets/portfolio/list/COFFEE.jpg" alt="" /> </picture
         ></a>
-        <div class="clear"></div>
+        <!-- <h5>October 2019</h5> -->
+        <div class="details">
+          <a
+            href="https://www.wsj.com/articles/what-rising-temperatures-mean-for-coffee-bean-farmers-11570629999"
+            target="_blank"
+          >
+            <h3
+              data-title="What Rising Temperatures Mean for Coffee-Bean Farmers"
+            >
+              What Rising Temperatures Mean for Coffee-Bean Farmers
+            </h3></a
+          >
+          <div class="clear"></div>
+        </div>
       </div>
-    </div>
 
-    <!-- AMZN -->
-    <div class="project-container list" id="amazon-shipping">
-      <span
-        ><a
-          href="https://www.wsj.com/articles/how-amazons-shipping-empire-is-challenging-ups-and-fedex-11567071003"
-          target="_blank"
-          ><h3>
-            How Amazon’s Shipping Empire Is Challenging UPS and FedEx
-          </h3></a
-        >
-        <h5>&nbsp;|&nbsp;August 2019</h5></span
-      >
-      <div class="details hidden">
+      <!-- OPIOID -->
+      <div class="project-container list" id="treatment-bottleneck">
         <a
-          href="https://www.wsj.com/articles/how-amazons-shipping-empire-is-challenging-ups-and-fedex-11567071003"
+          href="https://www.wsj.com/articles/opioid-addiction-treatment-is-limited-by-shortage-of-authorized-doctors-11591538400"
           target="_blank"
-        >
-          <picture>
+          ><picture>
             <source
               media="(min-width:450px)"
-              srcset="assets/portfolio/list/AMZN-full.jpg"
+              srcset="assets/portfolio/list/HEADDICT-full.jpg"
             />
-            <img src="assets/portfolio/list/AMZN.jpg" alt="" /> </picture
+            <img src="assets/portfolio/list/HEADDICT.jpg" alt="" /> </picture
         ></a>
-        <div class="clear"></div>
+        <!-- <h5>June 2020</h5> -->
+        <div class="details">
+          <div class="meta">
+            <a
+              href="https://www.wsj.com/articles/opioid-addiction-treatment-is-limited-by-shortage-of-authorized-doctors-11591538400"
+              target="_blank"
+            >
+              <h3
+                data-title="Opioid-Addiction Treatment Is Limited by Shortage of Authorized
+          Doctors"
+              >
+                Opioid-Addiction Treatment Is Limited by Shortage of Authorized
+                Doctors
+              </h3></a
+            >
+          </div>
+          <div class="clear"></div>
+        </div>
       </div>
-    </div>
 
-    <!-- CHINA UNBOUND -->
-    <div class="project-container list" id="china-unbound">
-      <span
-        ><a
-          href="https://www.npr.org/series/650482198/chinas-global-influence"
-          target="_blank"
-          ><h3>
-            China Unbound
-          </h3></a
-        >
-        <h5>&nbsp;|&nbsp;October 2018</h5></span
-      >
-      <div class="details hidden">
+      <!-- RETAIL -->
+      <div class="project-container list" id="retail-closures">
         <a
-          href="https://www.npr.org/2018/10/02/653312942/china-unbound-what-an-emboldened-china-means-for-the-world"
+          href="https://www.wsj.com/graphics/tracking-americas-biggest-stores-coronavirus/"
           target="_blank"
-        >
-          <img src="assets/portfolio/list/CHINAUNBOUNDmap.gif" alt=""
+          ><picture>
+            <source
+              media="(min-width:450px)"
+              srcset="assets/portfolio/list/RETAILCLOSE-full.jpg"
+            />
+            <img src="assets/portfolio/list/RETAILCLOSE.jpg" alt="" /> </picture
+        ></a>
+        <!-- <h5>March 2020</h5> -->
+        <div class="details">
+          <div class="meta">
+            <a
+              href="https://www.wsj.com/graphics/tracking-americas-biggest-stores-coronavirus/"
+              target="_blank"
+              ><h3
+                data-title="Coronavirus and Store Closures: Tracking America’s Retailers and Restaurants"
+              >
+                Coronavirus and Store Closures: Tracking America’s Retailers and
+                Restaurants
+              </h3></a
+            >
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+
+      <!-- MM -->
+      <div class="project-container list" id="millennials-and-money">
+        <a
+          href="https://www.wsj.com/graphics/generations-investor-psychology/"
+          target="_blank"
+          ><img src="assets/portfolio/list/MM.gif" alt=""
         /></a>
-        <a
-          href="https://www.npr.org/2018/10/09/642587456/chinese-firms-now-hold-stakes-in-over-a-dozen-european-ports"
-          target="_blank"
-        >
-          <picture>
-            <source
-              media="(min-width:450px)"
-              srcset="assets/portfolio/list/CHINAUNBOUNDportmap-full.png"
-            />
-            <img
-              src="assets/portfolio/list/CHINAUNBOUNDportmap.png"
-              alt=""
-            /> </picture
-        ></a>
-        <div class="clear"></div>
+        <!-- <h5>March 2020</h5> -->
+        <div class="details">
+          <div class="meta">
+            <a
+              href="https://www.wsj.com/graphics/generations-investor-psychology/"
+              target="_blank"
+            >
+              <h3
+                data-title="OK, Millennial (and Gen Xer and Boomer): What Generation Do You Really Think Like? Take Our Quiz."
+              >
+                OK, Millennial (and Gen Xer and Boomer): What Generation Do You
+                Really Think Like? Take Our Quiz.
+              </h3></a
+            >
+          </div>
+          <div class="clear"></div>
+        </div>
       </div>
-    </div>
 
-    <!-- HOMEOWNERSHIP -->
-    <div class="project-container list" id="homeownership">
-      <span
-        ><a
-          href="https://www.npr.org/series/636798487/a-crisis-in-homeownership"
-          target="_blank"
-          ><h3>
-            The New Housing Crisis: Shut Out Of The Market
-          </h3></a
-        >
-        <h5>&nbsp;|&nbsp;August 2018</h5></span
-      >
-      <div class="details hidden">
+      <!-- WEYOUNG -->
+      <div class="project-container list" id="egg-freezing">
         <a
-          href="https://www.npr.org/2018/08/06/629410064/the-new-housing-crisis-shut-out-of-the-market"
+          href="https://www.wsj.com/articles/the-economics-of-freezing-your-eggs-11581786000"
           target="_blank"
-        >
-          <img src="assets/portfolio/list/HOMEOWNERSHIP.gif" alt=""
-        /></a>
-        <a
-          href="https://www.npr.org/2018/08/06/629410064/the-new-housing-crisis-shut-out-of-the-market"
-          target="_blank"
-        >
-          <picture>
+          ><picture>
             <source
               media="(min-width:450px)"
-              srcset="assets/portfolio/list/HOMEOWNERSHIPtype-full.png"
+              srcset="assets/portfolio/list/WEYOUNG-full.jpg"
             />
-            <img
-              src="assets/portfolio/list/HOMEOWNERSHIPtype.png"
-              alt=""
-            /> </picture
+            <img src="assets/portfolio/list/WEYOUNG.jpg" alt="" /> </picture
         ></a>
-        <a
-          href="https://www.npr.org/2018/08/07/632497683/in-baltimore-the-gap-between-white-and-black-homeownership-persists"
-          target="_blank"
-        >
-          <picture>
-            <source
-              media="(min-width:450px)"
-              srcset="assets/portfolio/list/HOMEOWNERSHIPrace-full.png"
-            />
-            <img
-              src="assets/portfolio/list/HOMEOWNERSHIPrace.png"
-              alt=""
-            /> </picture
-        ></a>
-        <div class="clear"></div>
+        <!-- <h5>February 2020</h5> -->
+        <div class="details">
+          <div class="meta">
+            <a
+              href="https://www.wsj.com/articles/the-economics-of-freezing-your-eggs-11581786000"
+              target="_blank"
+            >
+              <h3 data-title="The Economics of Freezing Your Eggs">
+                The Economics of Freezing Your Eggs
+              </h3></a
+            >
+          </div>
+          <div class="clear"></div>
+        </div>
       </div>
-    </div>
 
-    <!-- PLASTIC -->
-    <div class="project-container list" id="plastic-waste">
-      <span
-        ><a
+      <!-- PROFITABILITY -->
+      <div class="project-container list" id="profitability">
+        <a
+          href="https://www.wsj.com/articles/the-allure-and-risk-of-unprofitable-companies-11580843071"
+          target="_blank"
+          ><picture>
+            <source
+              media="(min-width:450px)"
+              srcset="assets/portfolio/list/IFNOPROFIT-full.jpg"
+            />
+            <img src="assets/portfolio/list/IFNOPROFIT.jpg" alt="" /> </picture
+        ></a>
+        <!-- <h5>March 2020</h5> -->
+        <div class="details">
+          <div class="meta">
+            <a
+              href="https://www.wsj.com/articles/the-allure-and-risk-of-unprofitable-companies-11580843071"
+              target="_blank"
+            >
+              <h3
+                data-title="Is it Worth Investing in Unprofitable Companies? We Ran the
+          Numbers"
+              >
+                Is it Worth Investing in Unprofitable Companies? We Ran the
+                Numbers
+              </h3></a
+            >
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+
+      <!-- 5G -->
+      <div class="project-container list" id="5g-stragglers">
+        <a
+          href="https://www.wsj.com/articles/in-the-race-for-5g-africa-lags-far-behind-11573527600"
+          target="_blank"
+          ><picture>
+            <source
+              media="(min-width:450px)"
+              srcset="assets/portfolio/list/5GSTRAGGLERS-full.jpg"
+            />
+            <img
+              src="assets/portfolio/list/5GSTRAGGLERS.jpg"
+              alt=""
+            /> </picture
+        ></a>
+        <!-- <h5>November 2019</h5> -->
+        <div class="details">
+          <div class="meta">
+            <a
+              href="https://www.wsj.com/articles/in-the-race-for-5g-africa-lags-far-behind-11573527600"
+              target="_blank"
+              ><h3 data-title="In the Race for 5G, Africa Lags Far Behind">
+                In the Race for 5G, Africa Lags Far Behind
+              </h3>
+            </a>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+
+      <!-- FIRE -->
+      <div class="project-container list" id="fire-risk">
+        <a
+          href="https://www.wsj.com/articles/steps-to-reduce-the-risk-of-wildfires-in-california-11574209097"
+          target="_blank"
+          ><picture>
+            <source
+              media="(min-width:450px)"
+              srcset="assets/portfolio/list/BIFIRE-full.jpg" />
+            <img src="assets/portfolio/list/BIFIRE.jpg" alt="" /></picture
+        ></a>
+        <!-- <h5>November 2019</h5> -->
+        <div class="details">
+          <div class="meta">
+            <a
+              href="https://www.wsj.com/articles/steps-to-reduce-the-risk-of-wildfires-in-california-11574209097"
+              target="_blank"
+            >
+              <h3
+                data-title="Steps to Reduce the Risk of Wildfires in California"
+              >
+                Steps to Reduce the Risk of Wildfires in California
+              </h3></a
+            >
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+
+      <!-- PLASTIC -->
+      <div class="project-container list" id="plastic-waste">
+        <a
           href="https://www.npr.org/2018/07/24/627505327/meet-the-woman-who-put-plastic-waste-on-the-map"
           target="_blank"
-          ><h3>
-            We're Drowning In Plastic Trash. Jenna Jambeck Wants To Save Us
-          </h3></a
-        >
-        <h5>&nbsp;|&nbsp;July 2018</h5></span
-      >
-      <div class="details hidden">
-        <a
-          href="https://www.npr.org/2018/07/24/627505327/meet-the-woman-who-put-plastic-waste-on-the-map"
-          target="_blank"
-        >
-          <picture>
+          ><picture>
             <source
               media="(min-width:450px)"
               srcset="assets/portfolio/list/PLASTIC-full.png"
             />
             <img src="assets/portfolio/list/PLASTIC.png" alt="" /> </picture
         ></a>
-        <div class="clear"></div>
+        <!-- <h5>July 2018</h5> -->
+        <div class="details">
+          <a
+            href="https://www.npr.org/2018/07/24/627505327/meet-the-woman-who-put-plastic-waste-on-the-map"
+            target="_blank"
+            ><h3
+              data-title="We're Drowning In Plastic Trash. Jenna Jambeck Wants To Save Us"
+            >
+              We're Drowning In Plastic Trash. Jenna Jambeck Wants To Save Us
+            </h3></a
+          >
+          <div class="clear"></div>
+        </div>
       </div>
     </div>
-
     <!-- JS -->
     <script src="assets/script.js"></script>
   </body>

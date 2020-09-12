@@ -3,7 +3,8 @@
 }
 
 body {
-  padding: 5% 10%;
+  padding: 5% 7%;
+  margin: 0;
 }
 
 span,
@@ -24,21 +25,10 @@ h3 {
   font-size: 30px;
   line-height: 50px;
   color: lightslategray;
-  opacity: 0.5;
   letter-spacing: 6px;
 }
 
-h3:before {
-  content: attr(data-title);
-  color: #59a3c8;
-  position: absolute;
-  transform: translate(7px, -3px);
-  z-index: -1;
-  opacity: 0.5;
-  width: 40vw;
-}
 h3:hover {
-  opacity: 1;
   color: #59a3c8;
 }
 
@@ -160,8 +150,11 @@ img:hover {
   }
 
   img {
-    width: 100% !important;
-    min-width: 300px;
+    max-height: 60vh;
+    width: auto !important;
+    max-width: 330px;
+    display: block;
+    margin: 0 auto;
   }
 
   .details {

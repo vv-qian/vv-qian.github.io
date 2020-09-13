@@ -72,6 +72,7 @@ hr {
   flex-direction: row-reverse;
 }
 
+video,
 img {
   width: 350px;
   border-width: 10px;
@@ -79,7 +80,8 @@ img {
   border-color: #fff;
   transition: border-color linear 100ms;
 }
-img:hover {
+img:hover,
+video:hover {
   border-color: #59a3c8;
 }
 

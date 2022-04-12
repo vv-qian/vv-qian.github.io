@@ -1,0 +1,82 @@
+:root {
+  font-family: "Inconsolata", monospace;
+}
+
+html,
+body {
+  background: #121212;
+  color: #fff;
+}
+
+body {
+  padding: 3% 0;
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+a {
+  color: #fff;
+}
+a:hover {
+  text-decoration: none;
+}
+
+span,
+p,
+h3,
+div {
+  font-weight: 400;
+}
+
+/** Row styling **/
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 100px 0 10px;
+  border-bottom: 1px solid #fff;
+  align-items: flex-end;
+}
+
+.row .left-align {
+  text-align: left;
+  padding: 0 3%;
+  /* font-weight: 700; */
+}
+
+.row .right-align {
+  text-align: right;
+  padding: 0 3%;
+  width: max(55%, 300px);
+}
+
+video,
+img {
+  width: max(90%, 300px);
+}
+
+#fire-risk img,
+#treatment-bottleneck img,
+#coronavirus-map img,
+#coronavirus-hotspots img,
+#egg-freezing img {
+  width: 450px;
+}
+
+/* MOBILE */
+@media screen and (max-width: 700px) {
+  .row.project {
+    flex-direction: column;
+  }
+
+  .row .right-align {
+    width: 100%;
+  }
+
+  video,
+  img {
+    margin: 5%;
+    padding-top: 5%;
+  }
+}

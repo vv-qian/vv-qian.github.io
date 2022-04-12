@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.599efe8e.css",
+    "main.js": "/static/js/main.582f3cc5.js",
+    "static/js/787.5e01a7ee.chunk.js": "/static/js/787.5e01a7ee.chunk.js",
+    "static/media/prosports.png": "/static/media/prosports.2e42f46f80acebb3d008.png",
+    "static/media/BALLOTRISK.png": "/static/media/BALLOTRISK.0bd9ab2ae8220b1c9554.png",
+    "index.html": "/index.html",
+    "main.599efe8e.css.map": "/static/css/main.599efe8e.css.map",
+    "main.582f3cc5.js.map": "/static/js/main.582f3cc5.js.map",
+    "787.5e01a7ee.chunk.js.map": "/static/js/787.5e01a7ee.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.599efe8e.css",
+    "static/js/main.582f3cc5.js"
+  ]
+}

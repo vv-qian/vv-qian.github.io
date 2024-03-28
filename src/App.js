@@ -14,11 +14,11 @@ function App() {
         right={
           <div>
             <span>
-              I currently work as a data analyst on the Square Communications
+            I currently work as a data analyst on the retail audience team at Square. I used to work as a data analyst on the Square Communications
               team, weaving trends and insights about business and consumer
-              behavior into a narrative. Previously, I worked as a frontend
+              behavior into narratives. Previously, I worked as a frontend
               engineer at a startup called Premise. And before that, I worked at
-              The Wall Street Journal and NPR as a data / graphics journalist.
+              The Wall Street Journal and NPR as a data and graphics journalist.
             </span>
             <br />
             <br />

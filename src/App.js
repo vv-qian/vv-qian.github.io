@@ -22,7 +22,6 @@ function App() {
             </span>
             <br />
             <br />
-            <i>I do other things, but this isn't meant to be comprehensive.</i>
           </div>
         }
       />

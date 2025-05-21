@@ -8,7 +8,7 @@ import ballotrisk from "./portfolio/list/BALLOTRISK.png";
 function App() {
   return (
     <div className="App">
-      <Row left="Vanessa Qian" right="Located on the West Coast most days" />
+      <Row left="Vanessa Qian" right="Located in Atlanta, GA" />
       <Row
         left="About"
         right={

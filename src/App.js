@@ -14,11 +14,7 @@ function App() {
         right={
           <div>
             <span>
-            I currently work as a data analyst on the retail audience team at Square. I used to work as a data analyst on the Square Communications
-              team, weaving trends and insights about business and consumer
-              behavior into narratives. Previously, I worked as a frontend
-              engineer at a startup called Premise. And before that, I worked at
-              The Wall Street Journal and NPR as a data and graphics journalist.
+            I currently work on various side projects, tinkering with AI coding agents to make AI-powered tools. My latest is doodle, if you'd like to check it out. I used to work as a data analyst at Block (aka Square). Previously, I worked as a frontend engineer at a startup called Premise. And before that, I worked at The Wall Street Journal and NPR as a data and graphics journalist.
             </span>
             <br />
             <br />

@@ -14,9 +14,11 @@ function App() {
         right={
           <div>
             <span>
-            I currently work on various side projects, tinkering with AI coding agents to make AI-powered tools. My latest is doodle, if you'd like to check it out. I used to work as a data analyst at Block (aka Square). Previously, I worked as a frontend engineer at a startup called Premise. And before that, I worked at The Wall Street Journal and NPR as a data and graphics journalist.
+            I'm currently building AI-powered side projects like <a href="https://doodle-flax.vercel.app/">doodle</a>. Previously, I was a data analyst at Block (fka Square), a frontend engineer at Premise, and a data journalist at The Wall Street Journal and NPR.
             </span>
             <br />
+            <br />
+            <a href="https://github.com/vv-qian/vv-qian.github.io/blob/gh-pages/Vanessa_Qian_Resume.pdf">View my resume</a>
             <br />
           </div>
         }

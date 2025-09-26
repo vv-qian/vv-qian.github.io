@@ -1,9 +1,10 @@
 import "./App.css";
 import Row from "./Row";
-import prosports from "./portfolio/walkthrough/prosports.png";
-import ballotrisk from "./portfolio/list/BALLOTRISK.png";
-// import gradpayFull from "./portfolio/walkthrough/WEGRADPAY-full.jpg";
-// import gradpay from "./portfolio/walkthrough/WEGRADPAY.png";
+import prosports from "./portfolio/walkthrough/prosports-mobile-lowres.gif";
+import creditscoregame from "./portfolio/walkthrough/CREDITSCOREGAME.gif";
+import twentytens from "./portfolio/walkthrough/TWENTYTENS.gif";
+import covidstorm from "./portfolio/walkthrough/COVIDSTORM_landing.gif";
+import march from "./portfolio/walkthrough/MARCHCHANGEDEVERYTHING-bigtop.gif";
 
 function App() {
   return (
@@ -17,13 +18,10 @@ function App() {
             I'm currently building AI-powered side projects like <a href="https://doodle-flax.vercel.app/">doodle</a>. Previously, I was a data analyst at Block (fka Square), a frontend engineer at Premise, and a data journalist at The Wall Street Journal and NPR.
             </span>
             <br />
-            <br />
-            <a href="https://github.com/vv-qian/vv-qian.github.io/blob/gh-pages/Vanessa_Qian_Resume.pdf">View my resume</a>
-            <br />
           </div>
         }
       />
-      <Row left="Selected Work" right="From my time in news" />
+      <Row left="Selected Work" right="From my time in news publications" />
       <Row
         id="pro-sports"
         left={
@@ -36,48 +34,54 @@ function App() {
         <img src={prosports} alt="" />
       </Row>
       <Row
-        id="ballot-risk"
+        id="credit-score"
         left={
-          <a href="https://www.wsj.com/articles/millions-of-mail-in-ballots-at-risk-in-battleground-states-with-looming-deadlines-11604152801">
-            Millions of Mail-in Ballots at Risk in Battleground States With
-            Looming Deadlines
+          <a href="https://www.wsj.com/articles/play-the-credit-score-game-11571832001">
+            The Credit Score Game
           </a>
         }
         subtitle
       >
-        <img src={ballotrisk} alt="" />
+        <img src={creditscoregame} alt="" />
       </Row>
-      {/* <Row
-        id="program-over-prestige"
+      <Row
+        id="covid-storm"
         left={
+          <a href="https://www.wsj.com/graphics/covid-storm-cases-deaths-testing-coronavirus-trump/">
+            The Covid Storm
+          </a>
+        }
+        subtitle
+      >
+        <img src={covidstorm} alt="" />
+      </Row>
+      <Row
+        id="march"
+        left={
+          <a href="https://www.wsj.com/graphics/march-changed-everything/">
+            The Month Coronavirus Felled American Business
+          </a>
+        }
+        subtitle
+      >
+        <img src={march} alt="" />
+      </Row>
+      <Row
+        id="twenty-tens"
+        left={
+          <a href="https://www.wsj.com/graphics/a-decade-of-news">
+            A Decade of News: How the Big Stories Evolved
+          </a>
+        }
+        subtitle
+      >
+        <img src={twentytens} alt="" />
+      </Row>
+      <Row left="If you have a subscription, here are some others.">
+        <div>
           <a href="https://www.wsj.com/articles/in-valuing-colleges-tops-in-prestige-doesnt-always-mean-tops-in-starting-salaries-11590532335">
             In Valuing Colleges, Tops in Prestige Doesn’t Always Mean Tops in
             Starting Salaries
-          </a>
-        }
-        subtitle
-      >
-        <picture>
-          <source media="(min-width:450px)" srcSet={gradpayFull} />
-          <img src={gradpay} alt="" />
-        </picture>
-      </Row> */}
-      <Row left="If you have a subscription, here are some others.">
-        <div>
-          <a href="A Decade of News: How the Big Stories Evolved">
-            A Decade of News: How the Big Stories Evolved
-          </a>{" "}
-          &bull;{" "}
-          <a href="https://www.wsj.com/graphics/march-changed-everything/">
-            The Month Coronavirus Felled American Business
-          </a>{" "}
-          &bull;{" "}
-          <a href="https://www.wsj.com/articles/play-the-credit-score-game-11571832001">
-            The Credit Score Game
-          </a>{" "}
-          &bull;{" "}
-          <a href="https://www.wsj.com/graphics/covid-storm-cases-deaths-testing-coronavirus-trump/">
-            The Covid Storm
           </a>{" "}
           &bull;{" "}
           <a href="https://www.wsj.com/articles/how-delayed-is-your-mail-in-ballot-11603706400">

@@ -56,12 +56,12 @@ img {
   width: max(90%, 300px);
 }
 
-#fire-risk img,
-#treatment-bottleneck img,
-#coronavirus-map img,
-#coronavirus-hotspots img,
-#egg-freezing img {
-  width: 450px;
+#covid-storm img,
+#pro-sports img,
+#credit-score img,
+#march img,
+#twenty-tens img {
+  width: 200px;
 }
 
 /* MOBILE */

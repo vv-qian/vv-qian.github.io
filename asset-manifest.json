@@ -1,17 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.599efe8e.css",
-    "main.js": "/static/js/main.ba07317f.js",
+    "main.css": "/static/css/main.399f538c.css",
+    "main.js": "/static/js/main.15f00182.js",
     "static/js/453.004731e8.chunk.js": "/static/js/453.004731e8.chunk.js",
-    "static/media/prosports.png": "/static/media/prosports.2e42f46f80acebb3d008.png",
-    "static/media/BALLOTRISK.png": "/static/media/BALLOTRISK.0bd9ab2ae8220b1c9554.png",
+    "static/media/prosports-mobile-lowres.gif": "/static/media/prosports-mobile-lowres.dba77f05d4fc94f9936e.gif",
+    "static/media/TWENTYTENS.gif": "/static/media/TWENTYTENS.d43b2389f063e26a267c.gif",
+    "static/media/MARCHCHANGEDEVERYTHING-bigtop.gif": "/static/media/MARCHCHANGEDEVERYTHING-bigtop.914373070f58d622fdd8.gif",
+    "static/media/COVIDSTORM_landing.gif": "/static/media/COVIDSTORM_landing.c34c4062d795f2af32a7.gif",
+    "static/media/CREDITSCOREGAME.gif": "/static/media/CREDITSCOREGAME.5da8e22f3bc3cd26e832.gif",
     "index.html": "/index.html",
-    "main.599efe8e.css.map": "/static/css/main.599efe8e.css.map",
-    "main.ba07317f.js.map": "/static/js/main.ba07317f.js.map",
+    "main.399f538c.css.map": "/static/css/main.399f538c.css.map",
+    "main.15f00182.js.map": "/static/js/main.15f00182.js.map",
     "453.004731e8.chunk.js.map": "/static/js/453.004731e8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.599efe8e.css",
-    "static/js/main.ba07317f.js"
+    "static/css/main.399f538c.css",
+    "static/js/main.15f00182.js"
   ]
 }
